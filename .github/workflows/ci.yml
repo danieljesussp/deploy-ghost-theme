@@ -17,8 +17,8 @@ on:
       domain:
         description: Domain
         required: true
-        default: blog.xn--danieljsaldaa-tkb.com
-
+        default: https://danieljsaldaña.com
+        
 jobs:
   deploy:
     name: Deploy Theme
