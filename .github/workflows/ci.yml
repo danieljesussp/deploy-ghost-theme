@@ -1,0 +1,31 @@
+name: CI + CD
+
+on:
+  schedule:
+    - cron: '0 12 * * 6'
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: Repository name with
+        required: true
+        default: eddiesigner/liebling
+      lighthouse:
+        description: Repository name with
+        required: false
+        default: true     
+        type: boolean
+      domain:
+        description: Domain
+        required: false
+        default: true        
+        default: blog.xn--danieljsaldaa-tkb.com
+
+jobs:
+  deploy:
+    name: Deploy Theme
+    uses: ./.github/workflows/deploy.yml
+
+  scan:
+    name: Lighthouse check action
+    needs: [deploy]
+    uses: ./.github/workflows/lighthouse.yml
