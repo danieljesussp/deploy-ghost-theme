@@ -2,6 +2,11 @@ name: Theme Ghost
 
 on:
   workflow_call:
+    inputs:
+      repository:
+        description: 'Repository name with'
+        required: true
+        default: ''  
 
 jobs:
   theme-ghost:
