@@ -2,16 +2,15 @@ name: CI + CD
 
 on:
   schedule:
-    - cron: '0 12 * * 6'
+    - cron: 0 12 * * 6
   workflow_dispatch:
     inputs:
       repository:
         description: Repository name with
         required: true
         default: eddiesigner/liebling
-        type: string
       lighthouse:
-        description: Repository name with
+        description: Scan web with lighthouse
         required: false
         default: true     
         type: boolean
@@ -19,7 +18,6 @@ on:
         description: Domain
         required: true
         default: https://blog.danieljsaldaña.com
-        type: string
 
 jobs:
   deploy:
