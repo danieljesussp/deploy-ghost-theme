@@ -16,7 +16,7 @@ on:
         default: true     
         type: boolean
       domain:
-        description: 'Domain
+        description: Domain
         required: true
         default: https://blog.danieljsaldaña.com
         type: string
