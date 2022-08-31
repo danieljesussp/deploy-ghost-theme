@@ -23,6 +23,9 @@ jobs:
   deploy:
     name: Deploy
     uses: ./.github/workflows/deploy.yml
+    secrets:
+      api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+      api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
 
   scan:
     name: Check action

@@ -2,6 +2,11 @@ name: Theme Ghost
 
 on:
   workflow_call:
+    secrets:
+      GHOST_ADMIN_API_URL: 
+        required: true
+      GHOST_ADMIN_API_KEY: 
+        required: true           
 
 jobs:
   theme-ghost:
@@ -11,3 +16,9 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: ${{ github.event.inputs.repository }}
+
+      - name: Deploy Ghost Theme
+        uses: TryGhost/action-deploy-theme@v1.5.0
+        with:
+          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
