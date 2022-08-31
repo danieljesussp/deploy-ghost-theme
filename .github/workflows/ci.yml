@@ -18,13 +18,13 @@ on:
         description: Domain
         required: true
         default: https://danieljsaldaña.com
-        
+
 jobs:
   deploy:
-    name: Deploy Theme
+    name: Deploy
     uses: ./.github/workflows/deploy.yml
 
   scan:
-    name: Lighthouse check action
+    name: Check action
     needs: [deploy]
     uses: ./.github/workflows/lighthouse.yml
