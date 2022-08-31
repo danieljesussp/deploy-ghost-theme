@@ -4,9 +4,9 @@ on:
   workflow_call:
     secrets:
       GHOST_ADMIN_API_URL: 
-        required: true
+        required: false
       GHOST_ADMIN_API_KEY: 
-        required: true           
+        required: false           
 
 jobs:
   theme-ghost:
