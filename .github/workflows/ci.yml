@@ -16,8 +16,7 @@ on:
         type: boolean
       domain:
         description: Domain
-        required: false
-        default: true        
+        required: true
         default: blog.xn--danieljsaldaa-tkb.com
 
 jobs:
