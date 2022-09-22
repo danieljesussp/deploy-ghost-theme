@@ -20,7 +20,7 @@ jobs:
         uses: foo-software/lighthouse-check-action@master
         with:
           outputDirectory: ${{ github.workspace }}/lighthouse/artifacts
-          urls: $DOMAIN
+          urls: ${{ env.DOMAIN }}
           
       - name: Upload artifacts
         uses: actions/upload-artifact@master
