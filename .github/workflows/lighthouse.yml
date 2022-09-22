@@ -3,9 +3,6 @@ name: Lighthouse check
 on:
   workflow_call:
 
-env:
-  DOMAIN: https://blog.danieljsaldaña.com
-
 jobs:
   lighthouse:
     runs-on: ubuntu-latest

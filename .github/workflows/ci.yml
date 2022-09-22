@@ -11,6 +11,10 @@ on:
         default: true     
         type: boolean      
 
+env:
+  REPOSITORY: eddiesigner/liebling
+  DOMAIN: https://blog.danieljsaldaña.com  
+
 jobs:
   deploy:
     name: Deploy

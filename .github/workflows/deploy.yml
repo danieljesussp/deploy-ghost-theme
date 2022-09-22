@@ -8,9 +8,6 @@ on:
       GHOST_ADMIN_API_KEY: 
         required: false           
 
-env:
-  REPOSITORY: eddiesigner/liebling
-
 jobs:
   theme-ghost:
     runs-on: ubuntu-latest
