@@ -9,11 +9,7 @@ on:
         description: Scan web with lighthouse
         required: false
         default: true     
-        type: boolean
-
-env:
-  REPOSITORY: eddiesigner/liebling
-  DOMAIN: https://blog.danieljsaldaña.com        
+        type: boolean      
 
 jobs:
   deploy:
