@@ -15,7 +15,7 @@ jobs:
       - name: ☁️ checkout repository
         uses: actions/checkout@v3
         with:
-          repository: ${{ github.event.inputs.repository }}
+          repository: $REPOSITORY
 
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1.5.0

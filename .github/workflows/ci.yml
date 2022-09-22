@@ -5,19 +5,15 @@ on:
     - cron: 0 12 * * 6
   workflow_dispatch:
     inputs:
-      repository:
-        description: Repository name with
-        required: true
-        default: eddiesigner/liebling
       lighthouse:
         description: Scan web with lighthouse
         required: false
         default: true     
         type: boolean
-      domain:
-        description: Domain
-        required: true
-        default: https://blog.danieljsaldaña.com
+
+env:
+  REPOSITORY: eddiesigner/liebling
+  DOMAIN: https://blog.danieljsaldaña.com        
 
 jobs:
   deploy:
